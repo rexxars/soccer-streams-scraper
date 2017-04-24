@@ -29,9 +29,13 @@ function parseMatches (body) {
     const [, id] = url.match(/\/streams\/(\d+\/.*?)$/)
     const numStreams = Number(link.find('.count').text())
 
-    const date = new Date(time)
+    const date = isoDate(time)
     return {id, teams, date, competition, url, numStreams}
   }).get()
+}
+
+function isoDate (date, offset) {
+  return new Date(date.replace(' ', 'T') + '.000Z')
 }
 
 function parseTeams (rootEl) {

@@ -68,7 +68,7 @@ test('can retrieve streams page (integration test)', () => {
   })
 })
 
-// Forces serialization of dates et all
+// Remove dates since they cant be easily compared
 function normalize (input) {
   return JSON.parse(JSON.stringify(input))
 }
