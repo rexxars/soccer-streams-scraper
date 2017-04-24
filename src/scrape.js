@@ -1,15 +1,15 @@
+'use strict'
+
 const cheerio = require('cheerio')
 const request = require('./request')
 
-async function getMatches () {
-  const body = await request('/').then(res => res.body)
-  return parseMatches(body)
+function getMatches () {
+  return request('/').then(res => parseMatches(res.body))
 }
 
-async function getStreamsForMatch (match) {
+function getStreamsForMatch (match) {
   const id = typeof match === 'string' ? match : match.id
-  const body = await request(`/streams/${id}`).then(res => res.body)
-  return parseStreams(body)
+  return request(`/streams/${id}`).then(res => parseStreams(res.body))
 }
 
 function parseMatches (body) {
