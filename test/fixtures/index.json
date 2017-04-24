@@ -1,0 +1,597 @@
+[
+  {
+    "id": "6071/vitesse-79_vs_feyenoord-70",
+    "teams": {
+      "home": {
+        "name": "Vitesse",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/vitesse-1530.png"
+      },
+      "away": {
+        "name": "Feyenoord",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/feyenoord-1518.png"
+      }
+    },
+    "date": "2017-04-23T10:30:00.000Z",
+    "competition": "Eredivisie",
+    "url": "http://soccerstreams.net/streams/6071/vitesse-79_vs_feyenoord-70",
+    "numStreams": 5
+  },
+  {
+    "id": "6068/sparta-rotterdam-76_vs_ado-den-haag-73",
+    "teams": {
+      "home": {
+        "name": "Sparta Rotterdam",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/sparta-rotterdam-1535.png"
+      },
+      "away": {
+        "name": "ADO Den Haag",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/ado-den-haag-1514.png"
+      }
+    },
+    "date": "2017-04-23T10:30:00.000Z",
+    "competition": "Eredivisie",
+    "url": "http://soccerstreams.net/streams/6068/sparta-rotterdam-76_vs_ado-den-haag-73",
+    "numStreams": 2
+  },
+  {
+    "id": "6050/milan-121_vs_empoli-129",
+    "teams": {
+      "home": {
+        "name": "Milan",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/milan-1240.png"
+      },
+      "away": {
+        "name": "Empoli",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/empoli-1261.png"
+      }
+    },
+    "date": "2017-04-23T11:00:00.000Z",
+    "competition": "Serie A",
+    "url": "http://soccerstreams.net/streams/6050/milan-121_vs_empoli-129",
+    "numStreams": 9
+  },
+  {
+    "id": "6054/toulouse-488_vs_nice-391",
+    "teams": {
+      "home": {
+        "name": "Toulouse",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/toulouse-899.png"
+      },
+      "away": {
+        "name": "Nice",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/nice-894.png"
+      }
+    },
+    "date": "2017-04-23T11:00:00.000Z",
+    "competition": "Ligue 1",
+    "url": "http://soccerstreams.net/streams/6054/toulouse-488_vs_nice-391",
+    "numStreams": 5
+  },
+  {
+    "id": "6079/udinese-138_vs_cagliari-133",
+    "teams": {
+      "home": {
+        "name": "Udinese",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/udinese-1246.png"
+      },
+      "away": {
+        "name": "Cagliari",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/cagliari-1256.png"
+      }
+    },
+    "date": "2017-04-23T11:00:00.000Z",
+    "competition": "Serie A",
+    "url": "http://soccerstreams.net/streams/6079/udinese-138_vs_cagliari-133",
+    "numStreams": 3
+  },
+  {
+    "id": "6053/chievo-131_vs_torino-134",
+    "teams": {
+      "home": {
+        "name": "Chievo",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/chievo-1248.png"
+      },
+      "away": {
+        "name": "Torino",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/torino-1268.png"
+      }
+    },
+    "date": "2017-04-23T11:00:00.000Z",
+    "competition": "Serie A",
+    "url": "http://soccerstreams.net/streams/6053/chievo-131_vs_torino-134",
+    "numStreams": 6
+  },
+  {
+    "id": "6048/sampdoria-137_vs_crotone-132",
+    "teams": {
+      "home": {
+        "name": "Sampdoria",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/sampdoria-1247.png"
+      },
+      "away": {
+        "name": "Crotone",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/crotone-1280.png"
+      }
+    },
+    "date": "2017-04-23T11:00:00.000Z",
+    "competition": "Serie A",
+    "url": "http://soccerstreams.net/streams/6048/sampdoria-137_vs_crotone-132",
+    "numStreams": 4
+  },
+  {
+    "id": "6052/lazio-69_vs_palermo-128",
+    "teams": {
+      "home": {
+        "name": "Lazio",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/lazio-1245.png"
+      },
+      "away": {
+        "name": "Palermo",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/palermo-1254.png"
+      }
+    },
+    "date": "2017-04-23T11:00:00.000Z",
+    "competition": "Serie A",
+    "url": "http://soccerstreams.net/streams/6052/lazio-69_vs_palermo-128",
+    "numStreams": 5
+  },
+  {
+    "id": "6072/burnley-1006_vs_manchester-united-56",
+    "teams": {
+      "home": {
+        "name": "Burnley",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/burnley-698.png"
+      },
+      "away": {
+        "name": "Manchester United",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/manchester-united-662.png"
+      }
+    },
+    "date": "2017-04-23T11:15:00.000Z",
+    "competition": "Premier League",
+    "url": "http://soccerstreams.net/streams/6072/burnley-1006_vs_manchester-united-56",
+    "numStreams": 39
+  },
+  {
+    "id": "6073/freiburg-504_vs_bayer-leverkusen-9",
+    "teams": {
+      "home": {
+        "name": "Freiburg",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/freiburg-970.png"
+      },
+      "away": {
+        "name": "Bayer Leverkusen",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/bayer-leverkusen-963.png"
+      }
+    },
+    "date": "2017-04-23T11:30:00.000Z",
+    "competition": "Bundesliga",
+    "url": "http://soccerstreams.net/streams/6073/freiburg-504_vs_bayer-leverkusen-9",
+    "numStreams": 10
+  },
+  {
+    "id": "6066/arsenal-8_vs_manchester-city-11",
+    "teams": {
+      "home": {
+        "name": "Arsenal",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/arsenal-660.png"
+      },
+      "away": {
+        "name": "Manchester City",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/manchester-city-676.png"
+      }
+    },
+    "date": "2017-04-23T12:00:00.000Z",
+    "competition": "FA Cup",
+    "url": "http://soccerstreams.net/streams/6066/arsenal-8_vs_manchester-city-11",
+    "numStreams": 31
+  },
+  {
+    "id": "6031/celta-de-vigo-19_vs_real-betis-639",
+    "teams": {
+      "home": {
+        "name": "Celta de Vigo",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/celta-de-vigo-2033.png"
+      },
+      "away": {
+        "name": "Real Betis",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/real-betis-2025.png"
+      }
+    },
+    "date": "2017-04-23T12:15:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6031/celta-de-vigo-19_vs_real-betis-639",
+    "numStreams": 5
+  },
+  {
+    "id": "6075/psv-81_vs_ajax-61",
+    "teams": {
+      "home": {
+        "name": "PSV",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/psv-1517.png"
+      },
+      "away": {
+        "name": "Ajax",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/ajax-1515.png"
+      }
+    },
+    "date": "2017-04-23T12:45:00.000Z",
+    "competition": "Eredivisie",
+    "url": "http://soccerstreams.net/streams/6075/psv-81_vs_ajax-61",
+    "numStreams": 5
+  },
+  {
+    "id": "6070/pacos-de-ferreira-887_vs_sporting-braga-884",
+    "teams": {
+      "home": {
+        "name": "Paços de Ferreira",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/pacos-de-ferreira-1693.png"
+      },
+      "away": {
+        "name": "Sporting Braga",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/sporting-braga-1682.png"
+      }
+    },
+    "date": "2017-04-23T13:00:00.000Z",
+    "competition": "Primeira Liga",
+    "url": "http://soccerstreams.net/streams/6070/pacos-de-ferreira-887_vs_sporting-braga-884",
+    "numStreams": 2
+  },
+  {
+    "id": "6055/saint-etienne-57_vs_rennes-491",
+    "teams": {
+      "home": {
+        "name": "Saint-Étienne",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/saint-etienne-901.png"
+      },
+      "away": {
+        "name": "Rennes",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/rennes-893.png"
+      }
+    },
+    "date": "2017-04-23T13:00:00.000Z",
+    "competition": "Ligue 1",
+    "url": "http://soccerstreams.net/streams/6055/saint-etienne-57_vs_rennes-491",
+    "numStreams": 3
+  },
+  {
+    "id": "6077/schalke-04-26_vs_rb-leipzig-503",
+    "teams": {
+      "home": {
+        "name": "Schalke 04",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/schalke-04-966.png"
+      },
+      "away": {
+        "name": "RB Leipzig",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/rb-leipzig-13410.png"
+      }
+    },
+    "date": "2017-04-23T13:30:00.000Z",
+    "competition": "Bundesliga",
+    "url": "http://soccerstreams.net/streams/6077/schalke-04-26_vs_rb-leipzig-503",
+    "numStreams": 4
+  },
+  {
+    "id": "6076/liverpool-123_vs_crystal-palace-1001",
+    "teams": {
+      "home": {
+        "name": "Liverpool",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/liverpool-663.png"
+      },
+      "away": {
+        "name": "Crystal Palace",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/crystal-palace-679.png"
+      }
+    },
+    "date": "2017-04-23T13:30:00.000Z",
+    "competition": "Premier League",
+    "url": "http://soccerstreams.net/streams/6076/liverpool-123_vs_crystal-palace-1001",
+    "numStreams": 12
+  },
+  {
+    "id": "6083/galatasaray-1641_vs_fenerbahce-41",
+    "teams": {
+      "home": {
+        "name": "Galatasaray",
+        "imgUrl": "https://cdn.soccerstreams.net/images/generic.png"
+      },
+      "away": {
+        "name": "Fenerbahçe",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/fenerbahce-2212.png"
+      }
+    },
+    "date": "2017-04-23T14:00:00.000Z",
+    "competition": "Süper Lig",
+    "url": "http://soccerstreams.net/streams/6083/galatasaray-1641_vs_fenerbahce-41",
+    "numStreams": 0
+  },
+  {
+    "id": "6069/anderlecht-58_vs_club-brugge-675",
+    "teams": {
+      "home": {
+        "name": "Anderlecht",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/anderlecht-215.png"
+      },
+      "away": {
+        "name": "Club Brugge",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/club-brugge-219.png"
+      }
+    },
+    "date": "2017-04-23T14:00:00.000Z",
+    "competition": "First Division A",
+    "url": "http://soccerstreams.net/streams/6069/anderlecht-58_vs_club-brugge-675",
+    "numStreams": 1
+  },
+  {
+    "id": "6032/las-palmas-645_vs_deportivo-alaves-20",
+    "teams": {
+      "home": {
+        "name": "Las Palmas",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/las-palmas-2055.png"
+      },
+      "away": {
+        "name": "Deportivo Alavés",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/deportivo-alaves-2037.png"
+      }
+    },
+    "date": "2017-04-23T14:30:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6032/las-palmas-645_vs_deportivo-alaves-20",
+    "numStreams": 1
+  },
+  {
+    "id": "6074/vitoria-guimaraes-889_vs_boavista-880",
+    "teams": {
+      "home": {
+        "name": "Vitória Guimarães",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/vitoria-guimaraes-1689.png"
+      },
+      "away": {
+        "name": "Boavista",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/boavista-1685.png"
+      }
+    },
+    "date": "2017-04-23T15:00:00.000Z",
+    "competition": "Primeira Liga",
+    "url": "http://soccerstreams.net/streams/6074/vitoria-guimaraes-889_vs_boavista-880",
+    "numStreams": 1
+  },
+  {
+    "id": "6040/pumas-unam-117_vs_veracruz-104",
+    "teams": {
+      "home": {
+        "name": "Pumas UNAM",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/pumas-unam-1473.png"
+      },
+      "away": {
+        "name": "Veracruz",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/veracruz-1469.png"
+      }
+    },
+    "date": "2017-04-23T15:00:00.000Z",
+    "competition": "Liga MX",
+    "url": "http://soccerstreams.net/streams/6040/pumas-unam-117_vs_veracruz-104",
+    "numStreams": 1
+  },
+  {
+    "id": "6047/new-york-city-875_vs_orlando-city-874",
+    "teams": {
+      "home": {
+        "name": "New York City",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/new-york-city-27696.png"
+      },
+      "away": {
+        "name": "Orlando City",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/orlando-city-13025.png"
+      }
+    },
+    "date": "2017-04-23T15:30:00.000Z",
+    "competition": "MLS",
+    "url": "http://soccerstreams.net/streams/6047/new-york-city-875_vs_orlando-city-874",
+    "numStreams": 4
+  },
+  {
+    "id": "6061/estudiantes-1021_vs_huracan-1024",
+    "teams": {
+      "home": {
+        "name": "Estudiantes",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/estudiantes-98.png"
+      },
+      "away": {
+        "name": "Huracán",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/huracan-123.png"
+      }
+    },
+    "date": "2017-04-23T16:15:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6061/estudiantes-1021_vs_huracan-1024",
+    "numStreams": 0
+  },
+  {
+    "id": "6033/real-madrid-5_vs_barcelona-2",
+    "teams": {
+      "home": {
+        "name": "Real Madrid",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/real-madrid-2016.png"
+      },
+      "away": {
+        "name": "Barcelona",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/barcelona-2017.png"
+      }
+    },
+    "date": "2017-04-23T16:45:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6033/real-madrid-5_vs_barcelona-2",
+    "numStreams": 12
+  },
+  {
+    "id": "6080/juventus-16_vs_genoa-127",
+    "teams": {
+      "home": {
+        "name": "Juventus",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/juventus-1242.png"
+      },
+      "away": {
+        "name": "Genoa",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/genoa-1276.png"
+      }
+    },
+    "date": "2017-04-23T16:45:00.000Z",
+    "competition": "Serie A",
+    "url": "http://soccerstreams.net/streams/6080/juventus-16_vs_genoa-127",
+    "numStreams": 3
+  },
+  {
+    "id": "6062/atletico-rafaela-1018_vs_boca-juniors-1040",
+    "teams": {
+      "home": {
+        "name": "Atlético Rafaela",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/atletico-rafaela-93.png"
+      },
+      "away": {
+        "name": "Boca Juniors",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/boca-juniors-95.png"
+      }
+    },
+    "date": "2017-04-23T17:15:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6062/atletico-rafaela-1018_vs_boca-juniors-1040",
+    "numStreams": 1
+  },
+  {
+    "id": "6078/porto-15_vs_feirense-890",
+    "teams": {
+      "home": {
+        "name": "Porto",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/porto-1678.png"
+      },
+      "away": {
+        "name": "Feirense",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/feirense-1705.png"
+      }
+    },
+    "date": "2017-04-23T17:15:00.000Z",
+    "competition": "Primeira Liga",
+    "url": "http://soccerstreams.net/streams/6078/porto-15_vs_feirense-890",
+    "numStreams": 1
+  },
+  {
+    "id": "6056/olympique-lyonnais-51_vs_monaco-12",
+    "teams": {
+      "home": {
+        "name": "Olympique Lyonnais",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/olympique-lyonnais-884.png"
+      },
+      "away": {
+        "name": "Monaco",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/monaco-885.png"
+      }
+    },
+    "date": "2017-04-23T17:15:00.000Z",
+    "competition": "Ligue 1",
+    "url": "http://soccerstreams.net/streams/6056/olympique-lyonnais-51_vs_monaco-12",
+    "numStreams": 4
+  },
+  {
+    "id": "6049/la-galaxy-864_vs_seattle-sounders-871",
+    "teams": {
+      "home": {
+        "name": "LA Galaxy",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/la-galaxy-2272.png"
+      },
+      "away": {
+        "name": "Seattle Sounders",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/seattle-sounders-13024.png"
+      }
+    },
+    "date": "2017-04-23T18:00:00.000Z",
+    "competition": "MLS",
+    "url": "http://soccerstreams.net/streams/6049/la-galaxy-864_vs_seattle-sounders-871",
+    "numStreams": 2
+  },
+  {
+    "id": "6063/san-martin-san-juan-1015_vs_belgrano-1031",
+    "teams": {
+      "home": {
+        "name": "San Martín San Juan",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/san-martin-san-juan-129.png"
+      },
+      "away": {
+        "name": "Belgrano",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/belgrano-114.png"
+      }
+    },
+    "date": "2017-04-23T18:00:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6063/san-martin-san-juan-1015_vs_belgrano-1031",
+    "numStreams": 1
+  },
+  {
+    "id": "6064/river-plate-1037_vs_sarmiento-1027",
+    "teams": {
+      "home": {
+        "name": "River Plate",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/river-plate-107.png"
+      },
+      "away": {
+        "name": "Sarmiento",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/sarmiento-3019.png"
+      }
+    },
+    "date": "2017-04-23T19:15:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6064/river-plate-1037_vs_sarmiento-1027",
+    "numStreams": 0
+  },
+  {
+    "id": "6051/minnesota-united-861_vs_colorado-rapids-867",
+    "teams": {
+      "home": {
+        "name": "Minnesota United",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/minnesota-united-14860.png"
+      },
+      "away": {
+        "name": "Colorado Rapids",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/colorado-rapids-2278.png"
+      }
+    },
+    "date": "2017-04-23T20:00:00.000Z",
+    "competition": "MLS",
+    "url": "http://soccerstreams.net/streams/6051/minnesota-united-861_vs_colorado-rapids-867",
+    "numStreams": 0
+  },
+  {
+    "id": "6065/talleres-cordoba-1033_vs_godoy-cruz-855",
+    "teams": {
+      "home": {
+        "name": "Talleres Córdoba",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/talleres-cordoba-110.png"
+      },
+      "away": {
+        "name": "Godoy Cruz",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/godoy-cruz-122.png"
+      }
+    },
+    "date": "2017-04-23T20:30:00.000Z",
+    "competition": "Primera División",
+    "url": "http://soccerstreams.net/streams/6065/talleres-cordoba-1033_vs_godoy-cruz-855",
+    "numStreams": 0
+  },
+  {
+    "id": "6041/santos-laguna-119_vs_america-115",
+    "teams": {
+      "home": {
+        "name": "Santos Laguna",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/santos-laguna-1468.png"
+      },
+      "away": {
+        "name": "América",
+        "imgUrl": "https://cdn.soccerstreams.net/images/teams/america-1458.png"
+      }
+    },
+    "date": "2017-04-23T22:00:00.000Z",
+    "competition": "Liga MX",
+    "url": "http://soccerstreams.net/streams/6041/santos-laguna-119_vs_america-115",
+    "numStreams": 0
+  }
+]

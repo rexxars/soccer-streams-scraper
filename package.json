@@ -1,0 +1,38 @@
+{
+  "name": "soccer-streams-scraper",
+  "version": "1.0.0",
+  "description": "Fetches soccer stream info from soccerstreams.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "posttest": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rexxars/soccer-streams.git"
+  },
+  "keywords": [
+    "soccer",
+    "streams",
+    "scrape"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/soccer-streams/issues"
+  },
+  "homepage": "https://github.com/rexxars/soccer-streams#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "get-it": "^1.0.4"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  }
+}

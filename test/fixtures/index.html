@@ -1,0 +1,1739 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exclusive free HD quality streams for cord cutters at Soccer Streams. We index stream links shared by hundreds of independent streamers.">
+  <meta name="author" content="soccerstreams team">
+    <link rel="icon" href="//cdn.soccerstreams.net/favicon.ico">
+  
+  <title>Soccer Streams</title>
+  
+  <!-- Material Design fonts -->
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,800">
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,500,700,600,800">
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,700">
+  <link rel="stylesheet" type="text/css" href="//cdn.soccerstreams.net/css/RobotoSlab.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="//cdn.soccerstreams.net/fonts/font-awesome/css/font-awesome.min.css">
+  
+  <!-- Bootstrap core CSS -->
+  <link href="//cdn.soccerstreams.net/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://soccerstreams.net/css/soccerstreams.css">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdn.soccerstreams.net/bootstrap/js/bootstrap.min.js"></script>
+  
+  <script src="//cdn.soccerstreams.net/js/moment.js"></script>
+  <script src="//cdn.soccerstreams.net/js/moment-timezone.js"></script>
+  <script>
+    function UpdateTimezone() {
+      var tzOptions = document.getElementById('offset');
+      var tz = tzOptions.options[tzOptions.selectedIndex].value;
+      var timezoneURL = "https://soccerstreams.net/setTimezone";
+      $.get(timezoneURL + "/" + tz);
+      $('.event-time').each(function (i, e) {
+        var oldTime = $(e).attr('data-eventtime');
+        var utcStart = moment.utc(oldTime).utcOffset('UTC');
+        var startDate = utcStart.utcOffset(tz * 60).format('D MMM HH:mm');
+        $(e).html(startDate);
+      });
+    }
+    function SelectElement(valueToSelect) {
+      var element = document.getElementById('offset');
+      element.value = valueToSelect;
+    }
+  </script>
+    <link rel="stylesheet" href="//cdn.soccerstreams.net/plugins/sweetalert/sweetalert.css">
+  <script src="//cdn.soccerstreams.net/plugins/sweetalert/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.13/r-2.1.1/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/r-2.1.1/datatables.min.js"></script>
+    <style>
+    .borderTop{
+      border-top: 2px solid #f39c12 !important;
+    }
+    .matches_divider{ width:0 !important; }
+    @media  screen and (-webkit-min-device-pixel-ratio:0) {
+      /*your rules for chrome*/
+      .sorting_disabled{ width:0 !important; }
+    }
+  </style>
+  <style>
+    @media (max-width: 768px) {
+      .navbar-brand {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      .navbar-brand > img {
+        margin: auto;
+        width: auto;
+      }
+      
+      .live-menu .navbar-nav {
+        float: none;
+        width: 195px;
+        margin: auto;
+      }
+    }
+    
+    #logo-ball {
+      display: block;
+      position: relative;
+      top: 11px;
+      left: 63px;
+      transition: transform 0.8s ease-in-out;
+    }
+    
+    .navbar-brand:hover #logo-ball {
+      transform: rotate(360deg);
+    }
+    
+    .navbar-brand {
+      display: block;
+      width: 242px;
+      height: 97px !important;
+      background: url("//cdn.soccerstreams.net/images/logo.png");
+      padding: initial !important;
+    }
+    
+    .navbar-brand > img {
+      height: initial !important;
+      margin-top: initial !important;
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-brand > img {
+        margin: initial !important;
+      }
+    }
+    
+    .full-logo {
+      width: 160px !important;
+      height: 50px !important;
+      background: none !important;
+    }
+    
+    .full-logo img {
+      margin-top: 10px !important;
+      width: 120px !important;
+    }
+    .live-menu .dropdown-menu{
+      background: #215e80;
+      min-width:30px;
+    }
+    #footer-links{ line-height:34px; }
+    #footer_timer{ line-height:36px;text-align:right; color:#B3994C; }
+    .footer #footer-links li a, .footer #footer-links li{ color:#B3994C; }
+    @media (max-width: 767px) {
+      #footer-links{ text-align:center; }
+    }
+  </style>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-91839096-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<nav class="logo-header" role="navigation">
+  <div class="container" id="headerContainer">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="“logo-confiner”">
+          <a href="https://soccerstreams.net" class="navbar-brand hidden-sm hidden-xs">
+            <img id="logo-ball" alt="Soccer Streams logo" src="//cdn.soccerstreams.net/images/ball.png">
+          </a>
+          <a href="https://soccerstreams.net" class="navbar-brand full-logo visible-sm visible-xs">
+            <img id="logo-ball-full" alt="Soccer Streams logo" src="//cdn.soccerstreams.net/images/small_logo.png">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+        <div class="live-menu collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="https://soccerstreams.net/rules"><i class="fa fa-soccer-ball-o"></i><span class="hidden-sm hidden-xs"> Rules</span></a>
+            </li>
+            <li class='spliter'><span>/</span></li>
+            <li>
+              <a href="https://soccerstreams.net/submit"><i class="fa fa-sticky-note"></i><span class="hidden-sm hidden-xs"> &nbsp;Submit streams</span></a>
+            </li>
+            <li class='spliter'><span>/</span></li>
+            <li>
+              <a href="https://soccerstreams.net/faq"><i class="fa fa-question-circle-o"></i><span class="hidden-sm hidden-xs"> &nbsp;FAQ</span></a>
+            </li>
+            <li class='spliter'><span>/</span></li>
+                          <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><span class="hidden-sm hidden-xs">&nbsp;Account</span></a>
+                <ul class="dropdown-menu">
+                <li>
+                  <a href="https://soccerstreams.net/login"><i class="fa fa-sign-in"></i><span class="hidden-sm hidden-xs"> &nbsp;Login</span></a>
+                </li>
+                <li>
+                  <a href="https://soccerstreams.net/register"><i class="fa fa-tv"></i><span class="hidden-sm hidden-xs"> &nbsp;Signup</span></a>
+                </li>
+                </ul>
+              </li>
+                      </ul>
+        </div>
+      </div>
+    </div>
+  </div>   <!-- /.container -->
+</nav>
+
+<div class="main-content">
+  <div class="container">
+    <div class="alert alert-warning">
+      Soccer Streams is still in a beta phase. If you face any bugs, please report them <a style="color:#337ab7 !important;" href="https://soccerstreams.net/contact-us">HERE</a>.
+    </div>
+    
+  
+    <div class="row">
+    <div class="col-xs-7 filter">
+      <div class="input-group">
+        <label class="col-sm-4" style="margin-top: 7px" for="competition_selector">Competition </label>
+        <div class="col-sm-8">
+          <select class="form-control" id="competition_selector">
+            <option value="">All</option>
+                          <option value="Eredivisie">Eredivisie</option>
+                          <option value="Serie A">Serie A</option>
+                          <option value="Ligue 1">Ligue 1</option>
+                          <option value="Premier League">Premier League</option>
+                          <option value="Bundesliga">Bundesliga</option>
+                          <option value="FA Cup">FA Cup</option>
+                          <option value="Primera División">Primera División</option>
+                          <option value="Primeira Liga">Primeira Liga</option>
+                          <option value="Süper Lig">Süper Lig</option>
+                          <option value="First Division A">First Division A</option>
+                          <option value="Liga MX">Liga MX</option>
+                          <option value="MLS">MLS</option>
+                      </select>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  <div id="manage_events">
+    <div class="table-responsive">
+      <table class="table table-striped table-hover" id="eventsTable" width="100%">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+                  <tr>
+            <td class="matches_divider" colspan="4">
+              <i class="fa fa-calendar fa-2x"></i>
+              <span>Sunday | 23 April</span>
+            </td>
+            <td class="matches_divider"></td>
+            <td class="matches_divider"></td>
+            <td class="matches_divider"></td>
+          </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 12:30:00">
+                    23 Apr 14:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Eredivisie</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/eredivisie.png" alt="Eredivisie" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Vitesse &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/vitesse-1530.png" alt="Vitesse" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/feyenoord-1518.png" alt="Feyenoord" width="30" height="30">&nbsp;Feyenoord
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6071/vitesse-79_vs_feyenoord-70" class="btn btn-rss">
+                  Watch
+                                      <span class="count">5</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 12:30:00">
+                    23 Apr 14:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Eredivisie</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/eredivisie.png" alt="Eredivisie" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Sparta Rotterdam &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/sparta-rotterdam-1535.png" alt="Sparta Rotterdam" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/ado-den-haag-1514.png" alt="ADO Den Haag" width="30" height="30">&nbsp;ADO Den Haag
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6068/sparta-rotterdam-76_vs_ado-den-haag-73" class="btn btn-rss">
+                  Watch
+                                      <span class="count">2</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:00:00">
+                    23 Apr 15:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Serie A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/seriea.png" alt="Serie A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Milan &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/milan-1240.png" alt="Milan" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/empoli-1261.png" alt="Empoli" width="30" height="30">&nbsp;Empoli
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6050/milan-121_vs_empoli-129" class="btn btn-rss">
+                  Watch
+                                      <span class="count">9</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:00:00">
+                    23 Apr 15:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Ligue 1</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/ligue1.png" alt="Ligue 1" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Toulouse &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/toulouse-899.png" alt="Toulouse" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/nice-894.png" alt="Nice" width="30" height="30">&nbsp;Nice
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6054/toulouse-488_vs_nice-391" class="btn btn-rss">
+                  Watch
+                                      <span class="count">5</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:00:00">
+                    23 Apr 15:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Serie A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/seriea.png" alt="Serie A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Udinese &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/udinese-1246.png" alt="Udinese" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/cagliari-1256.png" alt="Cagliari" width="30" height="30">&nbsp;Cagliari
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6079/udinese-138_vs_cagliari-133" class="btn btn-rss">
+                  Watch
+                                      <span class="count">3</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:00:00">
+                    23 Apr 15:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Serie A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/seriea.png" alt="Serie A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Chievo &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/chievo-1248.png" alt="Chievo" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/torino-1268.png" alt="Torino" width="30" height="30">&nbsp;Torino
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6053/chievo-131_vs_torino-134" class="btn btn-rss">
+                  Watch
+                                      <span class="count">6</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:00:00">
+                    23 Apr 15:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Serie A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/seriea.png" alt="Serie A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Sampdoria &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/sampdoria-1247.png" alt="Sampdoria" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/crotone-1280.png" alt="Crotone" width="30" height="30">&nbsp;Crotone
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6048/sampdoria-137_vs_crotone-132" class="btn btn-rss">
+                  Watch
+                                      <span class="count">4</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:00:00">
+                    23 Apr 15:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Serie A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/seriea.png" alt="Serie A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Lazio &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/lazio-1245.png" alt="Lazio" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/palermo-1254.png" alt="Palermo" width="30" height="30">&nbsp;Palermo
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6052/lazio-69_vs_palermo-128" class="btn btn-rss">
+                  Watch
+                                      <span class="count">5</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:15:00">
+                    23 Apr 15:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Premier League</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/premierleague.png" alt="Premier League" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Burnley &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/burnley-698.png" alt="Burnley" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/manchester-united-662.png" alt="Manchester United" width="30" height="30">&nbsp;Manchester United
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6072/burnley-1006_vs_manchester-united-56" class="btn btn-rss">
+                  Watch
+                                      <span class="count">39</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 13:30:00">
+                    23 Apr 15:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Bundesliga</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/gerbundisliga.png" alt="Bundesliga" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Freiburg &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/freiburg-970.png" alt="Freiburg" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/bayer-leverkusen-963.png" alt="Bayer Leverkusen" width="30" height="30">&nbsp;Bayer Leverkusen
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6073/freiburg-504_vs_bayer-leverkusen-9" class="btn btn-rss">
+                  Watch
+                                      <span class="count">10</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 14:00:00">
+                    23 Apr 16:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">FA Cup</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/facup.png" alt="FA Cup" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Arsenal &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/arsenal-660.png" alt="Arsenal" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/manchester-city-676.png" alt="Manchester City" width="30" height="30">&nbsp;Manchester City
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6066/arsenal-8_vs_manchester-city-11" class="btn btn-rss">
+                  Watch
+                                      <span class="count">31</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 14:15:00">
+                    23 Apr 16:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/laliga.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Celta de Vigo &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/celta-de-vigo-2033.png" alt="Celta de Vigo" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/real-betis-2025.png" alt="Real Betis" width="30" height="30">&nbsp;Real Betis
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6031/celta-de-vigo-19_vs_real-betis-639" class="btn btn-rss">
+                  Watch
+                                      <span class="count">5</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 14:45:00">
+                    23 Apr 16:45
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Eredivisie</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/eredivisie.png" alt="Eredivisie" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  PSV &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/psv-1517.png" alt="PSV" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/ajax-1515.png" alt="Ajax" width="30" height="30">&nbsp;Ajax
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6075/psv-81_vs_ajax-61" class="btn btn-rss">
+                  Watch
+                                      <span class="count">5</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 15:00:00">
+                    23 Apr 17:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primeira Liga</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/primeiraliga.png" alt="Primeira Liga" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Paços de Ferreira &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/pacos-de-ferreira-1693.png" alt="Paços de Ferreira" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/sporting-braga-1682.png" alt="Sporting Braga" width="30" height="30">&nbsp;Sporting Braga
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6070/pacos-de-ferreira-887_vs_sporting-braga-884" class="btn btn-rss">
+                  Watch
+                                      <span class="count">2</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 15:00:00">
+                    23 Apr 17:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Ligue 1</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/ligue1.png" alt="Ligue 1" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Saint-Étienne &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/saint-etienne-901.png" alt="Saint-Étienne" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/rennes-893.png" alt="Rennes" width="30" height="30">&nbsp;Rennes
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6055/saint-etienne-57_vs_rennes-491" class="btn btn-rss">
+                  Watch
+                                      <span class="count">3</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 15:30:00">
+                    23 Apr 17:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Bundesliga</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/gerbundisliga.png" alt="Bundesliga" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Schalke 04 &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/schalke-04-966.png" alt="Schalke 04" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/rb-leipzig-13410.png" alt="RB Leipzig" width="30" height="30">&nbsp;RB Leipzig
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6077/schalke-04-26_vs_rb-leipzig-503" class="btn btn-rss">
+                  Watch
+                                      <span class="count">4</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 15:30:00">
+                    23 Apr 17:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Premier League</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/premierleague.png" alt="Premier League" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Liverpool &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/liverpool-663.png" alt="Liverpool" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/crystal-palace-679.png" alt="Crystal Palace" width="30" height="30">&nbsp;Crystal Palace
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6076/liverpool-123_vs_crystal-palace-1001" class="btn btn-rss">
+                  Watch
+                                      <span class="count">12</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 16:00:00">
+                    23 Apr 18:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Süper Lig</p>
+                                  <img src="//cdn.soccerstreams.net/images/generic.png" alt="Süper Lig" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Galatasaray &nbsp;<img src="//cdn.soccerstreams.net/images/generic.png" alt="Galatasaray" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/fenerbahce-2212.png" alt="Fenerbahçe" width="30" height="30">&nbsp;Fenerbahçe
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6083/galatasaray-1641_vs_fenerbahce-41" class="btn btn-rss">
+                  Watch
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 16:00:00">
+                    23 Apr 18:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">First Division A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/belgianjupilerproleague.png" alt="First Division A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Anderlecht &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/anderlecht-215.png" alt="Anderlecht" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/club-brugge-219.png" alt="Club Brugge" width="30" height="30">&nbsp;Club Brugge
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6069/anderlecht-58_vs_club-brugge-675" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 16:30:00">
+                    23 Apr 18:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/laliga.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Las Palmas &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/las-palmas-2055.png" alt="Las Palmas" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/deportivo-alaves-2037.png" alt="Deportivo Alavés" width="30" height="30">&nbsp;Deportivo Alavés
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6032/las-palmas-645_vs_deportivo-alaves-20" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 17:00:00">
+                    23 Apr 19:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primeira Liga</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/primeiraliga.png" alt="Primeira Liga" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Vitória Guimarães &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/vitoria-guimaraes-1689.png" alt="Vitória Guimarães" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/boavista-1685.png" alt="Boavista" width="30" height="30">&nbsp;Boavista
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6074/vitoria-guimaraes-889_vs_boavista-880" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 17:00:00">
+                    23 Apr 19:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Liga MX</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/ligamx.png" alt="Liga MX" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Pumas UNAM &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/pumas-unam-1473.png" alt="Pumas UNAM" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/veracruz-1469.png" alt="Veracruz" width="30" height="30">&nbsp;Veracruz
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6040/pumas-unam-117_vs_veracruz-104" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 17:30:00">
+                    23 Apr 19:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">MLS</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/mls.png" alt="MLS" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  New York City &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/new-york-city-27696.png" alt="New York City" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/orlando-city-13025.png" alt="Orlando City" width="30" height="30">&nbsp;Orlando City
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6047/new-york-city-875_vs_orlando-city-874" class="btn btn-rss">
+                  Watch
+                                      <span class="count">4</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 18:15:00">
+                    23 Apr 20:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/arprimiradivision.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Estudiantes &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/estudiantes-98.png" alt="Estudiantes" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/huracan-123.png" alt="Huracán" width="30" height="30">&nbsp;Huracán
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6061/estudiantes-1021_vs_huracan-1024" class="btn btn-rss">
+                  Watch
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 18:45:00">
+                    23 Apr 20:45
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/laliga.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Real Madrid &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/real-madrid-2016.png" alt="Real Madrid" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/barcelona-2017.png" alt="Barcelona" width="30" height="30">&nbsp;Barcelona
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6033/real-madrid-5_vs_barcelona-2" class="btn btn-rss">
+                  Watch
+                                      <span class="count">12</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 18:45:00">
+                    23 Apr 20:45
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Serie A</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/seriea.png" alt="Serie A" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Juventus &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/juventus-1242.png" alt="Juventus" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/genoa-1276.png" alt="Genoa" width="30" height="30">&nbsp;Genoa
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6080/juventus-16_vs_genoa-127" class="btn btn-rss">
+                  Watch
+                                      <span class="count">3</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 19:15:00">
+                    23 Apr 21:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/arprimiradivision.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Atlético Rafaela &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/atletico-rafaela-93.png" alt="Atlético Rafaela" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/boca-juniors-95.png" alt="Boca Juniors" width="30" height="30">&nbsp;Boca Juniors
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6062/atletico-rafaela-1018_vs_boca-juniors-1040" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 19:15:00">
+                    23 Apr 21:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primeira Liga</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/primeiraliga.png" alt="Primeira Liga" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Porto &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/porto-1678.png" alt="Porto" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/feirense-1705.png" alt="Feirense" width="30" height="30">&nbsp;Feirense
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6078/porto-15_vs_feirense-890" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 19:15:00">
+                    23 Apr 21:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Ligue 1</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/ligue1.png" alt="Ligue 1" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Olympique Lyonnais &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/olympique-lyonnais-884.png" alt="Olympique Lyonnais" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/monaco-885.png" alt="Monaco" width="30" height="30">&nbsp;Monaco
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6056/olympique-lyonnais-51_vs_monaco-12" class="btn btn-rss">
+                  Watch
+                                      <span class="count">4</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 20:00:00">
+                    23 Apr 22:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">MLS</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/mls.png" alt="MLS" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  LA Galaxy &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/la-galaxy-2272.png" alt="LA Galaxy" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/seattle-sounders-13024.png" alt="Seattle Sounders" width="30" height="30">&nbsp;Seattle Sounders
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6049/la-galaxy-864_vs_seattle-sounders-871" class="btn btn-rss">
+                  Watch
+                                      <span class="count">2</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 20:00:00">
+                    23 Apr 22:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/arprimiradivision.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  San Martín San Juan &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/san-martin-san-juan-129.png" alt="San Martín San Juan" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/belgrano-114.png" alt="Belgrano" width="30" height="30">&nbsp;Belgrano
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6063/san-martin-san-juan-1015_vs_belgrano-1031" class="btn btn-rss">
+                  Watch
+                                      <span class="count">1</span>
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 21:15:00">
+                    23 Apr 23:15
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/arprimiradivision.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  River Plate &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/river-plate-107.png" alt="River Plate" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/sarmiento-3019.png" alt="Sarmiento" width="30" height="30">&nbsp;Sarmiento
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6064/river-plate-1037_vs_sarmiento-1027" class="btn btn-rss">
+                  Watch
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 22:00:00">
+                    24 Apr 00:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">MLS</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/mls.png" alt="MLS" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Minnesota United &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/minnesota-united-14860.png" alt="Minnesota United" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/colorado-rapids-2278.png" alt="Colorado Rapids" width="30" height="30">&nbsp;Colorado Rapids
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6051/minnesota-united-861_vs_colorado-rapids-867" class="btn btn-rss">
+                  Watch
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-23 22:30:00">
+                    24 Apr 00:30
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Primera División</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/arprimiradivision.png" alt="Primera División" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Talleres Córdoba &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/talleres-cordoba-110.png" alt="Talleres Córdoba" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/godoy-cruz-122.png" alt="Godoy Cruz" width="30" height="30">&nbsp;Godoy Cruz
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6065/talleres-cordoba-1033_vs_godoy-cruz-855" class="btn btn-rss">
+                  Watch
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                    
+                  <tr>
+            <td class="matches_divider" colspan="4">
+              <i class="fa fa-calendar fa-2x"></i>
+              <span>Monday | 24 April</span>
+            </td>
+            <td class="matches_divider"></td>
+            <td class="matches_divider"></td>
+            <td class="matches_divider"></td>
+          </tr>
+                                  <tr >
+              <td width="10%" class="">
+                                  <span class="event-time" data-eventtime="2017-04-24 00:00:00">
+                    24 Apr 02:00
+                  </span>
+                              </td>
+              <td width="10%" class="">
+                <p class="hidden">Liga MX</p>
+                                  <img src="//cdn.soccerstreams.net/images/competitions/small/ligamx.png" alt="Liga MX" width="30 " height="30">
+                              </td>
+                              <td class="text-center ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-5 text-right">
+                                                  Santos Laguna &nbsp;<img src="//cdn.soccerstreams.net/images/teams/small/santos-laguna-1468.png" alt="Santos Laguna" width="30" height="30">
+                                              </div>
+                      <div class="col-md-2 text-center">
+                                                  vs
+                                              </div>
+                      <div class="col-md-5 text-left">
+                                                  <img src="//cdn.soccerstreams.net/images/teams/small/america-1458.png" alt="América" width="30" height="30">&nbsp;América
+                                              </div>
+                    </div>
+                  </div>
+                </td>
+                            <td width="15%" class="text-center ">
+                                  <a href="http://soccerstreams.net/streams/6041/santos-laguna-119_vs_america-115" class="btn btn-rss">
+                  Watch
+                                    </a>
+                                <!-- Add star icon next to favourite team/com. event -->
+                                  <i class="fa fa-fw"></i>
+                  <i class="fa fa-fw"></i>
+                              </td>
+            </tr>
+                    
+                </tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+  </div>
+  </div><!-- /.container -->
+</div>
+
+<footer class="footer color-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-xs-12 pull-right">
+        <div class="col-sm-6 col-xs-7 hidden-xs" id="footer_timer">
+          23rd April 15:32:31
+        </div>
+        <div class="col-sm-6 col-xs-6 col-xs-offset-3 col-sm-offset-0">
+          <select id="offset" class="form-control select-style" name="offset" onchange="UpdateTimezone();">
+                                          
+                            <option value="-12" > (GMT -12:00) Eniwetok, Kwajalein                  
+              </option>
+                                          
+                            <option value="-11" > (GMT -11:00) Midway Island, Samoa                  
+              </option>
+                                          
+                            <option value="-10" > (GMT -10:00) Hawaii                  
+              </option>
+                                          
+                            <option value="-9.5" > (GMT -9:30) Taiohae                  
+              </option>
+                                          
+                            <option value="-9" > (GMT -9:00) Alaska                  
+              </option>
+                                          
+                            <option value="-8" > (GMT -8:00) Pacific Time (US &amp; Canada)                  
+              </option>
+                                          
+                            <option value="-7" > (GMT -7:00) Mountain Time (US &amp; Canada)                  
+              </option>
+                                          
+                            <option value="-6" > (GMT -6:00) Central Time (US &amp; Canada), Mexico City                  
+              </option>
+                                          
+                            <option value="-5" > (GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima                  
+              </option>
+                                          
+                            <option value="-4.5" > (GMT -4:30) Caracas                  
+              </option>
+                                          
+                            <option value="-4" > (GMT -4:00) Atlantic Time (Canada), Caracas, La Paz                  
+              </option>
+                                          
+                            <option value="-3.5" > (GMT -3:30) Newfoundland                  
+              </option>
+                                          
+                            <option value="-3" > (GMT -3:00) Brazil, Buenos Aires, Georgetown                  
+              </option>
+                                          
+                            <option value="-2" > (GMT -2:00) Mid-Atlantic                  
+              </option>
+                                          
+                            <option value="-1" > (GMT -1:00) Azores, Cape Verde Islands                  
+              </option>
+                                          
+                            <option value="+0" > (GMT +0:00) Western Europe Time, London, Lisbon, Casablanca                  
+              </option>
+                                          
+                            <option value="+1" > (GMT +1:00) Brussels, Copenhagen, Madrid, Paris                  
+              </option>
+                                          selected
+                            <option value="+2" selected> (GMT +2:00) Kaliningrad, South Africa                  
+              </option>
+                                          
+                            <option value="+3" > (GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg                  
+              </option>
+                                          
+                            <option value="+3.5" > (GMT +3:30) Tehran                  
+              </option>
+                                          
+                            <option value="+4" > (GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi                  
+              </option>
+                                          
+                            <option value="+4.5" > (GMT +4:30) Kabul                  
+              </option>
+                                          
+                            <option value="+5" > (GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent                  
+              </option>
+                                          
+                            <option value="+5.5" > (GMT +5:30) Bombay, Calcutta, Madras, New Delhi                  
+              </option>
+                                          
+                            <option value="+5.75" > (GMT +5:45) Kathmandu, Pokhara                  
+              </option>
+                                          
+                            <option value="+6" > (GMT +6:00) Almaty, Dhaka, Colombo                  
+              </option>
+                                          
+                            <option value="+6.5" > (GMT +6:30) Yangon, Mandalay                  
+              </option>
+                                          
+                            <option value="+7" > (GMT +7:00) Bangkok, Hanoi, Jakarta                  
+              </option>
+                                          
+                            <option value="+8" > (GMT +8:00) Beijing, Perth, Singapore, Hong Kong                  
+              </option>
+                                          
+                            <option value="+8.75" > (GMT +8:45) Eucla                  
+              </option>
+                                          
+                            <option value="+9" > (GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk                  
+              </option>
+                                          
+                            <option value="+9.5" > (GMT +9:30) Adelaide, Darwin                  
+              </option>
+                                          
+                            <option value="+10" > (GMT +10:00) Eastern Australia, Guam, Vladivostok                  
+              </option>
+                                          
+                            <option value="+10.5" > (GMT +10:30) Lord Howe Island                  
+              </option>
+                                          
+                            <option value="+11" > (GMT +11:00) Magadan, Solomon Islands, New Caledonia                  
+              </option>
+                                          
+                            <option value="+11.5" > (GMT +11:30) Norfolk Island                  
+              </option>
+                                          
+                            <option value="+12" > (GMT +12:00) Auckland, Wellington, Fiji, Kamchatka                  
+              </option>
+                                          
+                            <option value="+12.75" > (GMT +12:45) Chatham Islands                  
+              </option>
+                                          
+                            <option value="+13" > (GMT +13:00) Apia, Nukualofa                  
+              </option>
+                                          
+                            <option value="+14" > (GMT +14:00) Line Islands, Tokelau                  
+              </option>
+                      </select>
+        </div>
+      </div>
+      <div class="col-sm-5 col-xs-12 pull-right">
+          <ul id="footer-links">
+            <li><a href="https://soccerstreams.net/contact-us">Contact us</a></li>
+            <li>Coded with <span style="color: red;">❤</span></li>
+            <li class="last_child"><a href="https://soccerstreams.net/dmca">DMCA</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://soccerstreams.net/js/date.format.js"></script>
+<script type="text/javascript">
+  var now = new Date("2017-04-23 15:32:31");
+  var second = 0;
+
+  function getdate( ){
+    date = new Date( now ).getTime() + parseInt(second) * 1000 ;
+    converted = new Date( date );
+    var h = converted.getHours();
+    var m = converted.getMinutes();
+    var s = converted.getSeconds();
+
+    $("#footer_timer").html( dateFormat(converted, "dS mmmm H:MM:ss"));
+    second++;
+    setTimeout(function( ){getdate()}, 1000);
+  }
+  getdate();
+</script>
+  <script>
+    $(function ($) {
+      if (typeof currentZoneOffset !== 'undefined') {
+        momentZone = moment.tz.guess();
+        currentZoneOffset = moment.tz(momentZone).utcOffset() / 60;
+        tz = currentZoneOffset;
+      } else {
+        var tzOptions = document.getElementById('offset');
+        var tz = tzOptions.options[tzOptions.selectedIndex].value;
+      }
+      var table = $('#eventsTable').DataTable({
+        responsive: true,
+        paging: false,
+        info: false,
+        ordering: false,
+        orderCellsTop: true,
+        dom: 'lrtip'
+      });
+      
+      $('#eventsTable').on('click', 'tbody tr', function () {
+        if ($(this).find('td').hasClass('matches_divider')) {
+          return;
+        }
+        window.location.href = $(this).find('.btn-rss').attr('href');
+      });
+      
+      $('#competition_selector').on('change', function (e) {
+        table.search(this.value).draw();
+      });
+
+      table.search( $('#competition_selector').val() ).draw();
+    });
+
+    function notificationAction(el) {
+      $.post(
+        'https://soccerstreams.net/profile/notificationAction',
+        {"_token": "FuqMk6wTEk4Z5QiK43iG6pFouk87o8p4QkEPn0ZZ", "id": el, "action": 1},
+        function (data, status) {
+          console.log(data)
+        });
+    }
+
+    function verifyAlert()
+    {
+      $.post(
+        'https://soccerstreams.net/profile/closeAlert',
+        {"_token": "FuqMk6wTEk4Z5QiK43iG6pFouk87o8p4QkEPn0ZZ"},
+        function (data, status) {
+          console.log(data)
+        });
+    }
+  </script>
+</body>
+</html>
+
+<style type="text/css">
+select#offset.form-control.select-style {
+    padding: 0;
+    margin: 0;
+    color: #B3994C !important;
+    border: 0px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    border: none;
+    box-shadow: none;
+    width:130%;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.select-style:active, .select-style:hover {
+  outline: none
+}
+.select-style:hover {
+    color: white;
+    background: #7d7d7d;
+    opacity: 1;
+}
+</style>
